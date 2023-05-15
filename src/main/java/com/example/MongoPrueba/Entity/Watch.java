@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(value = "watch")
+@Document(value = "watchSeries")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Watch {

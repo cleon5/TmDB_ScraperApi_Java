@@ -1,9 +1,6 @@
 package com.example.MongoPrueba.Service;
 
-import com.example.MongoPrueba.Entity.Credits;
-import com.example.MongoPrueba.Entity.Pelicula;
-import com.example.MongoPrueba.Entity.Videos;
-import com.example.MongoPrueba.Entity.Watch;
+import com.example.MongoPrueba.Entity.*;
 import com.example.MongoPrueba.Repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,6 +13,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ServicePeliculas {
     private final RepoPeliculas repoPeliculas;
+    private final RepoTv repoTv;
     private final RepoCreditos repoCreditos;
     private final RepoVideos repoVideos;
     private final RepoWatch repoWatch;
@@ -24,6 +22,9 @@ public class ServicePeliculas {
 
     public void save(Pelicula pelicula){
         repoPeliculas.save(pelicula);
+    }
+    public void save(Tv serie){
+        repoTv.save(serie);
     }
     public void save(Credits credicts){
         repoCreditos.save(credicts);
